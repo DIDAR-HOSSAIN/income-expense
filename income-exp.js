@@ -29,6 +29,7 @@ totalExp.innerText = allExpItems;
 const totalBal = document.getElementById('balance-id');
 const allExp = foodValStringToFlot + rentValStringToFlot + clothValStringToFlot;
 const expBal = incomeValStringToFloat - allExp;
+// const result = expBal;
 totalBal.innerText = expBal;
 
 // console.log(foodValStringToFlot + rentValStringToFlot + clothValStringToFlot);
@@ -53,12 +54,16 @@ document.getElementById('save-button').addEventListener('click', function(){
     // const stringSavingAmount = 
     savingsAmount.innerText = percentCalculate;
 
+    const balance = document.getElementById('balance-id');
+    const currentBal = balance;
+    console.log(currentBal);
+
+
     const remainingBal = document.getElementById('remaining-balance');
-    // const remainDeduct = remainingBal.innerText;
-    const remainTotal = totalBal - savingsAmount;
-    remainingBal.innerText = remainTotal;
+    const totalToRemainBal = currentBal - savingsAmount;
+    remainingBal.innerText = totalToRemainBal;
 
 
-    console.log(remainingBal);
+    console.log(totalToRemainBal);
 })
 
