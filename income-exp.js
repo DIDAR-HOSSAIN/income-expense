@@ -35,7 +35,30 @@ totalBal.innerText = expBal;
 
 })
 
-// document.getElementById('save-button').addEventListener('click', function(){
-//     const savings = document.getElementById('')
-// })
+document.getElementById('save-button').addEventListener('click', function(){
+    // incomeField
+    const savings = document.getElementById('income-id');
+    const incomeVal = savings.value;
+    const stringToFlot = parseFloat(incomeVal);
+
+    // Percent or Saving field Calculation
+    const savingsPercent = document.getElementById('save-id');
+    const savingsVal = savingsPercent.value;
+    const stringToFloatSavings = savingsVal;
+    const savingResult = stringToFlot / 100;
+    const percentCalculate = savingResult*stringToFloatSavings;
+
+    const savingsAmount = document.getElementById('savings-amount');
+    // const savingAmountVal = savingsAmount.innerText;
+    // const stringSavingAmount = 
+    savingsAmount.innerText = percentCalculate;
+
+    const remainingBal = document.getElementById('remaining-balance');
+    // const remainDeduct = remainingBal.innerText;
+    const remainTotal = totalBal - savingsAmount;
+    remainingBal.innerText = remainTotal;
+
+
+    console.log(remainingBal);
+})
 
